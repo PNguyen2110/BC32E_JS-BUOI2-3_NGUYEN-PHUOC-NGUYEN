@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ 
+        fieldset {
+            width: 20rem;
+            margin: 50px auto;
+            
+
+        }
+        legend{
+            color:blue;
+        }
+        span{
+            color:red;
+        }
+        #pDienTich,
+        #pChuVi{
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- BÀI 1: TÍNH TỔNG LƯƠNG -->
+    <fieldset class="table1">
+        <legend>BÀI 1: TÍNH TỔNG LƯƠNG</legend>
+        <form action="#">
+            <div>
+
+                <label for="">Nhập số ngày công:</label>
+                <input id="soNgay" type="text" placeholder="100.000/ngày">
+            </div>
+            <br>
+            <div>
+                <button id="thanhTien1">Thành Tiền</button>
+            </div>
+            <p>Lương của bạn là: <span id="tongLuong"></span> 
+            </p>
+        </form>
+    </fieldset>
+
+
+    <!-- BÀI 2: TÍNH GIÁ TRỊ TRUNG BÌNH -->
+    <fieldset>
+        <legend>BÀI 2: TÍNH GIÁ TRỊ TRUNG BÌNH</legend>
+        <form action="#">
+            <div>
+
+                <label for="">Nhập vào 5 số:</label>
+                <input id="input" type="text" min="5" max="5">
+            </div>
+            <br>
+            <div>
+                <button id="btnTrungBinh">Tính giá trị trung bình</button>
+            </div>
+            <div id="divTrungBinh">
+                <p>Giá trị trung bình là: <span id="spanTrungBinh"></span></p>
+            </div>
+        </form>
+    </fieldset>
+
+
+    <!-- BÀI 3: ĐỔI TIỀN -->
+    <fieldset>
+        <legend>BÀI 3: ĐỔI TIỀN</legend>
+        <form action="#">
+            <div>
+
+                <label for="soTien">Nhập số tiền:</label>
+                <input id="soTien" type="text" placeholder="1$ = 23.500VND">
+            </div>
+            <br>
+            <div>
+                <button id="thanhTien">Thành Tiền</button>
+            </div>
+            <p>Số tiền của bạn là: <span id="tongTien"></span> 
+            </p>
+        
+        </form>
+    </fieldset>
+
+
+    <!-- >BÀI 4: TÍNH CHU VI, DIỆN TÍCH -->
+    <fieldset>
+        <legend>BÀI 4: TÍNH CHU VI, DIỆN TÍCH</legend>
+        <form action="#">
+            <div>
+                <label for="chieuDai">Nhập chiều dài(đơn vị:m):</label>
+                <input id="chieuDai" type="text">
+            </div>
+            <br>
+            <div>
+                <label for="chieuRong">Nhập chiều rộng(đơn vị:m)</label>
+                <input id="chieuRong" type="text">
+            </div>
+            <br>
+            <div>
+                <button id="dienTich">Diện tích</button>
+                <button id="chuVi">Chu vi</button>
+            </div>
+
+            <span>
+                <p id="pDienTich">Diện tích là: <span id="spanDienTich"></span>m2 </p>
+                <p id="pChuVi">Chu vi là: <span id="spanChuvi"></span>m</p>
+            </span>
+
+        </form>
+    </fieldset>
+
+
+    <!-- BÀI 5: TÍNH TỔNG 2 KÝ SỐ -->
+    <fieldset>
+        <legend>BÀI 5: TÍNH TỔNG 2 KÝ SỐ</legend>
+        <form action="#">
+            <div>
+
+                <label for="">Nhập vào 2 số:</label>
+                <input id="input5" type="text">
+            </div>
+            <br>
+            <div>
+                <button id="btnTong5">Tính tổng 2 số</button>
+            </div>
+            <div id="divTong">
+                <p>Tổng 2 số là: <span id="spanTong5"></span></p>
+            </div>
+        </form>
+    </fieldset>
+
+<script src="../javascript/main.js"></script>
+    
+</body>
+
+</html>
