@@ -43,11 +43,7 @@
         btnTrungBinh.onclick = function (e) {
             e.preventDefault();
             var input = +document.getElementById("input").value;
-            // input=parseFloat(input)
             
-            // var tong = Math.floor((input / 10000)+(input / 1000 % 10)+(input / 100 % 10)+(input % 100 / 10)+(input % 10));
-            // console.log(tong);
-
             // lấy giá trị hàng trăm ngàn, ngàn, trăm, chục, đơn vị
             
             var chucNgan = Math.floor((input / 10000));
@@ -56,7 +52,7 @@
             var chuc = Math.floor(input % 100 / 10); 
             var donVi = Math.floor(input % 10);
             console.log(typeof(input))
-
+            // tính trung bình
             var trungBinh = (chucNgan + ngan + tram + chuc + donVi) / 5;
             var spanTrungBinh = document.getElementById("spanTrungBinh");
             spanTrungBinh.innerHTML = trungBinh;
@@ -78,7 +74,7 @@
         thanhTien.onclick = function (e) {
             e.preventDefault();
             var soTien = +document.getElementById('soTien').value;
-            soTien = parseFloat(soTien)
+
             var tongTien = document.getElementById('tongTien');
             tongTien.innerHTML = (soTien * 23500 ).toLocaleString() + 'VND';
         };
@@ -98,17 +94,17 @@
         // -chu vi = (dài + rong)*2
 
         //bước 3 : kết quả = ?
+        
 
+        // tính diện tích
         var dienTich = document.getElementById("dienTich")
         dienTich.onclick = function (e) {
             e.preventDefault();
             //chiều dài
             var chieuDai = +document.getElementById('chieuDai').value;
-            chieuDai = parseFloat(chieuDai);
             // chiều rộng
             var chieuRong = +document.getElementById('chieuRong').value;
-            chieuRong = parseFloat(chieuRong);
-
+            
             var spanDienTich = document.getElementById('pDienTich');
             pDienTich.style.display = 'block';
             var spanDienTich = document.getElementById('spanDienTich');
@@ -118,15 +114,14 @@
             spanDienTich.innerHTML = (chieuDai * chieuRong).toLocaleString();
         }
 
+        // tính chu vi
         var chuVi = document.getElementById("chuVi")
         chuVi.onclick = function (e) {
             e.preventDefault();
             // chiều dài
             var chieuDai = +document.getElementById('chieuDai').value;
-            chieuDai = parseFloat(chieuDai);
             // chiều rông
             var chieuRong = +document.getElementById('chieuRong').value;
-            chieuRong = parseFloat(chieuRong);
 
             var pChuVi = document.getElementById('pChuVi');
             pChuVi.style.display = 'block';
@@ -158,7 +153,7 @@
             
             var Tong2So = Math.floor((input / 10) + (input % 10));
  
-
+            // tổng 2 số
             var spanTong = document.getElementById('spanTong5');
             spanTong.innerHTML = Tong2So;
        }
